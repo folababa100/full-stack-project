@@ -1,0 +1,12 @@
+{
+  "test": {
+    "PORT": "4000",
+    "MONGO_URI": "mongodb://localhost:27017/StreamJarTest",
+    "JWT_SECRET": "170ue8bciyb3e7byhcue89u29ubvv8hw82eu8hc9"
+  },
+  "development": {
+    "PORT": "4000",
+    "MONGO_URI": "mongodb://localhost:27017/StreamJar",
+    "JWT_SECRET": "17WWbff8bciyb3e7byhcue89u29ubvv8hw82eu8"
+  }
+}
