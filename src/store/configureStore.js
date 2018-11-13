@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk';
-import authAdminReducer'../reducers/adminAuth';
+import authAdminReducer from '../reducers/adminAuth';
 import axios from 'axios';
 
 

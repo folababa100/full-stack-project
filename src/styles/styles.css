@@ -1,0 +1,37 @@
+.box-layout {
+  align-items: center;
+  background: url("/bg.jpg");
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw; }
+
+* {
+  color: #272727 !important; }
+
+.btn-submit {
+  margin-bottom: 1.5rem;
+  background-color: #373332;
+  color: #e2e2e2 !important; }
+
+.btn-submit:hover {
+  background-color: #3d3a39; }
+
+.form-control:focus {
+  border-color: #777775;
+  outline: 0;
+  background-color: white;
+  box-shadow: 0 0 0 0.2rem #49505780; }
+
+.btn-submit:focus {
+  border-color: #777775;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #49505780; }
+
+.header-form {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #272727; }
