@@ -74,6 +74,50 @@ $text-color: white;
   margin-top: -0.4rem;
 }
 
+.sidebar {
+  width: 10vw;
+  height: 100vh;
+  background-color: #042e4a;
+}
+
+.sidebar_bar {
+  width: 100%;
+  height: 4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebar_h3 {
+  text-align: center;
+  font-weight: 400;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.sidebar_bar:hover {
+  background-color: rgba(0, 123, 255, 0.09);
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.navbar-dark-my .navbar-brand {
+  color: #c7c7c7;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
 .btn-submit {
   margin-bottom: 1.5rem;
   background-color: #373332;
@@ -106,6 +150,27 @@ $text-color: white;
   border-color: #777775;
   outline: 0;
   box-shadow: 0 0 0 0.2rem #49505780;
+}
+
+.a_title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #dddddd !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.a_title:hover {
+  color: #dddddd !important;
+  text-decoration: underline;
+}
+
+.ion-admin {
+  color: #ddd !important;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 .header-form {
