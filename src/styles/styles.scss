@@ -1,4 +1,10 @@
 $color: #272727;
+$text-color: white;
+
+* {
+  color: $color !important;
+  border-radius: 0 !important;
+}
 
 .box-layout {
   align-items: center;
@@ -10,14 +16,68 @@ $color: #272727;
   width: 100vw;
 }
 
-* {
-  color: $color !important;
+.color {
+  color: $text-color !important;
+}
+
+.youtube-color {
+  background-color: #FF0000;
+  padding: .3rem .7rem;
+}
+
+.twitch-color {
+  background-color: #6441a5;
+  padding: .3rem .7rem;
+}
+
+.youtube-color:focus {
+  border-color: #ec0202;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ff0000a8;
+}
+
+.twitch-color:focus {
+  border-color: #6039a7;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #6441a5d1;
+}
+
+.twitch-color:hover {
+  background-color: #6f51a7;
+}
+
+.youtube-color:hover {
+  background-color: rgb(250, 32, 32);
+}
+
+.mt-6 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.person-login-round {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50% !important;
+  background-color: #373332cf;
+  position: absolute;
+  z-index: 1000;
+  top: -7rem;
+  left: 6.5rem;
+}
+
+.person-round {
+  font-size: 7rem;
+  color: white !important;
+  text-align: center;
+  display: block;
+  margin-top: -0.4rem;
 }
 
 .btn-submit {
   margin-bottom: 1.5rem;
   background-color: #373332;
-  color: #e2e2e2 !important;
+  color: $text-color !important;
 }
 
 .btn-submit:hover {
@@ -29,6 +89,17 @@ $color: #272727;
   outline: 0;
   background-color: white;
   box-shadow: 0 0 0 0.2rem #49505780;
+}
+
+.x4 {
+  font-size: 1.4rem;
+  margin-right: 1.5rem;
+}
+
+.light-weight {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .btn-submit:focus {

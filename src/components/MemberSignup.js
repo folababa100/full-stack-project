@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-export default class AdminLogin extends Component {
+export default class MemberSignup extends Component {
   render() {
     return (
       <div className="box-layout">
         <div className="container">
           <div className="row" style={{ justifyContent: 'center' }}>
             <div className="col-md-6 col-sm-6 col-lg-4 col-12">
-              <div className="card" style={{ height: "26rem" }}>
+              <div className="card">
                 <div className="card-body">
-                  <form className="mt-6" style={{ textAlign: 'center' }}>
-                    <h3 className="header-form">Admin Login</h3>
+                  <h3 className="light-weight text-center">StreamJar</h3>
+                  <button className="twitch-color color btn-block btn">
+                    <i className="color x4 ion-social-twitch-outline"></i>
+                    Login with Twitch
+                  </button>
+                  <hr/>
+                  <button className="youtube-color color btn-block btn">
+                    <i className="color x4 ion-social-youtube"></i>
+                    Login with Youtube
+                  </button>
+                  <div className="flex">
+                    <hr/>
+                    <p className="light-weight text-center">Or</p>
+                    <hr/>
+                  </div>
+                  <form style={{ textAlign: 'center' }}>
                     <div className="form-group">
                       <input className="form-control" placeholder="Email" type="text" />
                     </div>
@@ -22,7 +36,7 @@ export default class AdminLogin extends Component {
                       <input className="form-control" placeholder="Password" type="password"/>
                     </div>
                     <button className="btn btn-block btn-submit">Submit</button>
-                    <Link to="/forgot">Forgot your password?</Link>
+                    <Link to="/login">Already have an account with us?</Link>
                   </form>
                 </div>
               </div>
