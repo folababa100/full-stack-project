@@ -9,9 +9,6 @@ const SideBarAdmin = () => {
       <div className="mt-7">
         <SidebarBar title="Dashboard"/>
       </div>
-      <SidebarBar title="Products" />
-      <SidebarBar title="Configuration"/>
-      <SidebarBar title="Settings" />
     </div>
   )
 }

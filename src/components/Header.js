@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem, } from 'reactstrap';
 
-export default class HeaderAdmin extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -43,22 +43,6 @@ export default class HeaderAdmin extends Component {
               </NavItem>
               <NavItem>
                 <NavLink className="nav-link" to="/about">About</NavLink>
-              </NavItem>
-              <NavItem className="nav-item-adjust">
-                <i onClick={() => this.onInputSearch()} className="ion-android-search-icon ion-android-search"></i>
-              </NavItem>
-            </Nav>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <form className="form-inline">
-                  <input id="search" className="borderRad-2 form-control mr-sm-2" placeholder="Search Users"/>
-                </form>
-              </NavItem>
-              <NavItem>
-                <button onClick={() => this.reloadCurrent()} className="btn btn-round">
-                  <i style={{ marginRight: '0.4rem' }} className="ion-refresh-adjust ion-refresh"></i>
-                  Reload
-                </button>
               </NavItem>
             </Nav>
           </Collapse>

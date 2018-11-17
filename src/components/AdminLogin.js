@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
 
 export default class AdminLogin extends Component {
   render() {
     return (
       <div className="box-layout">
+        <Helmet>
+          <title>Stream Jar | Admin login</title>
+        </Helmet>
         <div className="container">
           <div className="row" style={{ justifyContent: 'center' }}>
             <div className="col-md-6 col-sm-6 col-lg-4 col-12">

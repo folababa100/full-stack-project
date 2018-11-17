@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-export default class NotFound extends Component {
+export default class AdminUserEdit extends Component {
   render() {
     return (
       <div>
         <Helmet>
-          <title>Stream Jar | NotFound</title>
+          <title>Stream Jar | User edit</title>
         </Helmet>
-        404
+        Welcome to the user Edit page
       </div>
     )
   }
