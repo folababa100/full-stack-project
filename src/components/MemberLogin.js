@@ -7,7 +7,7 @@ export default class MemberLogin extends Component {
     return (
       <div className="box-layout">
         <Helmet>
-          <title>Stream Jar | Login</title>
+          <title>StreamJar | Login</title>
         </Helmet>
         <div className="container">
           <div className="row" style={{ justifyContent: 'center' }}>
@@ -15,7 +15,7 @@ export default class MemberLogin extends Component {
               {/* <div className="person-login-round">
                 <i className="person-round ion-android-person"></i>
               </div> */}
-              <div className="card" style={{ marginBottom: "-5rem" }}>
+              <div className="card">
                 <div className="card-body">
                   <h3 className="light-weight text-center">StreamJar</h3>
                   <button className="twitch-color color btn-block btn">
@@ -34,7 +34,7 @@ export default class MemberLogin extends Component {
                   </div>
                   <form style={{ textAlign: 'center' }}>
                     <div className="form-group">
-                      <input className="form-control" placeholder="Email" type="text" />
+                      <input className="form-control" placeholder="Email Address" type="text" />
                     </div>
                     {/* <div className="form-group">
                       <input className="form-control" placeholder="Username" type="text" />

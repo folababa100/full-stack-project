@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import ProfileSection from './ProfileSection';
+import ProfileDetails from './ProfileDetails';
+import Header from './Header';
 
-export default class componentName extends Component {
+export default class UserProfile extends Component {
   render() {
     return (
-      <div>
+      <div className="main-profile">
         <Helmet>
-          <title>Stream Jar | Profile</title>
+          <title>StreamJar | Profile</title>
         </Helmet>
-        <h2>Welcome to the sidebar page</h2>
+        <Header/>
+        <div className="mt-3 container">
+          <div className="row">
+            <div className="col-4">
+              <ProfileSection/>
+            </div>
+            <div className="col-8">
+              <ProfileDetails/>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

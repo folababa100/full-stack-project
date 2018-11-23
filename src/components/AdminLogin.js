@@ -7,7 +7,7 @@ export default class AdminLogin extends Component {
     return (
       <div className="box-layout">
         <Helmet>
-          <title>Stream Jar | Admin login</title>
+          <title>StreamJar | Admin login</title>
         </Helmet>
         <div className="container">
           <div className="row" style={{ justifyContent: 'center' }}>

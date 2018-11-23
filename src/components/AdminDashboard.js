@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HeaderAdmin from './HeaderAdmin';
 import MainBody from './MainBody';
+import SidebarAdmin from './SidebarAdmin';
 import { Helmet } from "react-helmet";
 
 export default class AdminDashboard extends Component {
@@ -8,9 +9,12 @@ export default class AdminDashboard extends Component {
     return (
       <div className="dashboard-container">
         <Helmet>
-          <title>Stream Jar | Admin dashboard</title>
+          <title>StreamJar | Admin dashboard</title>
         </Helmet>
-        <div className="main">
+        <div className="sidebar">
+          <SidebarAdmin/>
+        </div>
+        <div className="main-sidebar">
           <HeaderAdmin/>
           <MainBody/>
         </div>

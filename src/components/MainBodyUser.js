@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProfileSection from './ProfileSection';
+import ProfileDetails from './ProfileDetails';
 
 export default class MainBodyUser extends Component {
   render() {
@@ -11,7 +12,7 @@ export default class MainBodyUser extends Component {
               <ProfileSection/>
             </div>
             <div className="col-8">
-              
+              <ProfileDetails/>
             </div>
           </div>
         </div>

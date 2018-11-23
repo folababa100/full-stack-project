@@ -10,7 +10,7 @@ import AdminDashboard from '../components/AdminDashboard';
 import Dashboard from '../components/Dashboard';
 import UserProfile from '../components/UserProfile';
 import ForgotPassword from '../components/ForgotPassword';
-import AdminUserEdit from '../components/AdminUserEdit';
+import ForgotPasswordForm from '../components/ForgotPasswordForm'
 
 export const history = createHistory();
 
@@ -22,11 +22,11 @@ const AppRouter = () => (
         <Route component={MemberLogin} path="/login" />
         <Route component={MemberSignup} path="/signup" />
         <Route component={Dashboard} path="/dashboard" />
-        <Route component={ForgotPassword} path="/forgot"/>
-        <Route component={UserProfile} path="/u/:username" />
+        <Route component={ForgotPassword} path="/forgot/password"/>
+        <Route component={ForgotPasswordForm} path="/forgot/reset"/>
+        <Route component={UserProfile} path="/u/username" />
         <Route component={AdminDashboard} exact={true} path="/admin" />
         <Route component={AdminLogin} path="/admin/login" />
-        <Route component={AdminUserEdit} path="/admin/user/edit/:id"/>
         <Route component={NotFound} />
       </Switch>
     </div>

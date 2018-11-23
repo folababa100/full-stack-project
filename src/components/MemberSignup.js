@@ -7,7 +7,7 @@ export default class MemberSignup extends Component {
     return (
       <div className="box-layout">
         <Helmet>
-          <title>Stream Jar | Signup</title>
+          <title>StreamJar | Signup</title>
         </Helmet>
         <div className="container">
           <div className="row" style={{ justifyContent: 'center' }}>
@@ -31,7 +31,7 @@ export default class MemberSignup extends Component {
                   </div>
                   <form style={{ textAlign: 'center' }}>
                     <div className="form-group">
-                      <input className="form-control" placeholder="Email" type="text" />
+                      <input className="form-control" placeholder="Email Adresss" type="text" />
                     </div>
                     <div className="form-group">
                       <input className="form-control" placeholder="Username" type="text" />

@@ -8,7 +8,7 @@ export default class Dashboard extends Component {
     return (
       <div>
         <Helmet>
-          <title>Stream Jar | Dashboard</title>
+          <title>StreamJar | Dashboard</title>
         </Helmet>
         <div className="main">
           <Header/>

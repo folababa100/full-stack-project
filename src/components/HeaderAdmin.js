@@ -30,8 +30,8 @@ export default class HeaderAdmin extends Component {
   render() {
     return (
       <div>
-        <Navbar style={{ backgroundColor: 'white', borderBottom: '1px solid #ddd' }} className="navbar-light" light expand="md">
-          <NavLink className="nav-brand-adjust navbar-brand" to="/admin">
+        <Navbar className="nav-adjust navbar-light" light expand="md">
+          <NavLink className="font-family-change nav-brand-adjust navbar-brand" to="/admin">
             <img style={{ marginBottom: "0.5rem" }} className="d-inline-block align-top" width="50" height="50" src="/streamjar-round.png" alt="StreamJar Logo"></img>
             StreamJar
           </NavLink>

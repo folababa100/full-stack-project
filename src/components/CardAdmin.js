@@ -8,10 +8,10 @@ export default class CardAdmin extends Component {
         <div style={{ minHeight: "83vh" }} className="card-body">
           <div className="container">
             <div className="row">
-              <div className="col-8 col-md-4">
+              <div className="col-12 col-sm-8 col-md-6">
                 <div className="card">
                   <div className="card-body">
-                    <h3 style={{ fontWeight: '300', fontSize: "1.3rem" }}>Total Unpaid Balance: <span style={{ fontWeight: '600' }}>$20,000</span></h3>
+                    <h3 style={{ fontWeight: '300', fontSize: "1.3rem" }}>Total Unpaid Balance: <span className="font-family-change" style={{ fontWeight: '600' }}>$20,000</span></h3>
                   </div>
                 </div>
               </div>
@@ -22,12 +22,12 @@ export default class CardAdmin extends Component {
                   <table className="table table-striped table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col">Edit</th>
-                        <th scope="col">AccountID</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Paypal Email</th>
-                        <th scope="col">Amount Unpaid</th>
-                        <th scope="col">Pay</th>
+                        <th className="font-family-change" scope="col">Edit</th>
+                        <th className="font-family-change" scope="col">AccountID</th>
+                        <th className="font-family-change" scope="col">Username</th>
+                        <th className="font-family-change" scope="col">Paypal Email</th>
+                        <th className="font-family-change" scope="col">Amount Unpaid</th>
+                        <th className="font-family-change" scope="col">Pay</th>
                       </tr>
                     </thead>
                     <tbody>

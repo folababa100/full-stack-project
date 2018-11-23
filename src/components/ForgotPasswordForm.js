@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet';
 
-export default class ForgotPassword extends Component {
+export default class ForgotPasswordForm extends Component {
   render() {
     return (
       <div>
         <Helmet>
-          <title>StreamJar | Forgot</title>
+          <title>StreamJar | Reset-password</title>
         </Helmet>
         <div className="box-layout">
           <div className="container">
@@ -15,11 +15,17 @@ export default class ForgotPassword extends Component {
                 <div className="card">
                   <div className="card-body">
                     <h3 style={{ textAlign: 'center' }} className="font-family-change forgot-pass">Forgot your password?</h3>
-                    <hr/>
-                    <p className="forgot-pass mt-4">Can't remember your password? Just sit back change your password is very easy.</p>
+                    <hr />
+                    <p className="forgot-pass mt-4">Your password should be a minimum of 8 characters with letters, number and symbol Included.</p>
                     <form>
                       <div className="form-group">
-                        <input placeholder="Email Adresss" className="form-control" type="email" />
+                        <input placeholder="Current Password" className="form-control" type="password" />
+                      </div>
+                      <div className="form-group">
+                        <input placeholder="New Password" className="form-control" type="password" />
+                      </div>
+                      <div className="form-group">
+                        <input placeholder="Confirm Password" className="form-control" type="password" />
                       </div>
                       <button className="btn btn-submit">Submit</button>
                     </form>
