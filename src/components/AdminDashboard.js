@@ -11,11 +11,9 @@ export default class AdminDashboard extends Component {
         <Helmet>
           <title>StreamJar | Admin dashboard</title>
         </Helmet>
-        <div className="sidebar">
+        <HeaderAdmin/>
+        <div className="main">
           <SidebarAdmin/>
-        </div>
-        <div className="main-sidebar">
-          <HeaderAdmin/>
           <MainBody/>
         </div>
       </div>

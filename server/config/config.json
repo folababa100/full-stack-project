@@ -8,5 +8,10 @@
     "PORT": "4000",
     "MONGO_URI": "mongodb://localhost:27017/StreamJar",
     "JWT_SECRET": "17WWbff8bciyb3e7byhcue89u29ubvv8hw82eu8"
+  },
+  "production": {
+    "PORT": "4000",
+    "MONGO_URI": "mongodb://folababa1:folababa1@ds113640.mlab.com:13640/stream-jar",
+    "JWT_SECRET": "17WWbff8bciyb3e7byhcue89u29ubvv8hw82eu8"
   }
 }

@@ -16,7 +16,7 @@ export default class ForgotPassword extends Component {
                   <div className="card-body">
                     <h3 style={{ textAlign: 'center' }} className="font-family-change forgot-pass">Forgot your password?</h3>
                     <hr/>
-                    <p className="forgot-pass mt-4">Can't remember your password? Just sit back change your password is very easy.</p>
+                    <p className="forgot-pass mt-4">Can't remember your password? Just sit back, changing your password is very easy.</p>
                     <form>
                       <div className="form-group">
                         <input placeholder="Email Adresss" className="form-control" type="email" />

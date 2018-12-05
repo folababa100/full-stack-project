@@ -16,7 +16,7 @@ export default class ForgotPasswordForm extends Component {
                   <div className="card-body">
                     <h3 style={{ textAlign: 'center' }} className="font-family-change forgot-pass">Forgot your password?</h3>
                     <hr />
-                    <p className="forgot-pass mt-4">Your password should be a minimum of 8 characters with letters, number and symbol Included.</p>
+                    <p className="forgot-pass mt-4">Your password should be a minimum of 8 characters mixed with letters, number and symbol Included.</p>
                     <form>
                       <div className="form-group">
                         <input placeholder="Current Password" className="form-control" type="password" />

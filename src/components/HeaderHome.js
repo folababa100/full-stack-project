@@ -38,11 +38,49 @@ export default class HeaderAdmin extends Component {
               <NavItem>
                 <NavLink className="nav-link" to="/about">About</NavLink>
               </NavItem>
+              {
+                this.props.display === true ? (
+                  <NavItem>
+                    <NavLink className="nav-link" to="/find/users">Find Users</NavLink>
+                  </NavItem>
+                ) : (
+                  <div>
+
+                  </div>
+                )
+              }
             </Nav>
+            {
+              this.props.displaySearch === true ? (
+                <Nav navbar>
+                  <NavItem className="mbb-sm-1">
+                    <form style={{ marginTop: '-0.15rem' }} className="form-inline">
+                      <div className="searchbar-style">
+                        <div className="search-btn">
+                          <i className="i-search ion-android-search"></i>
+                        </div>
+                        <div>
+                          <input className="searchbar borderRad-2 form-control mr-sm-2" placeholder="Search Users"/>
+                        </div>
+                      </div>
+                    </form>
+                  </NavItem>
+                </Nav>
+              ) : (
+                <div>
+                  
+                </div>
+              )
+            }
             <Nav className="mtt-sm-1 ml-auto" navbar>
+              <NavItem className="res-login" style={{ marginRight: '0.7rem' }}>
+                <button className="btn-round-trans btn">
+                  Login
+                </button>
+              </NavItem>
               <NavItem>
                 <button className="btn-round-trans btn">
-                  Logout
+                  SignUp
                 </button>
               </NavItem>
             </Nav>

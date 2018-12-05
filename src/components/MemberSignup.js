@@ -24,7 +24,7 @@ export default class MemberSignup extends Component {
                     <i className="color x4 ion-social-youtube"></i>
                     Login with Youtube
                   </button>
-                  <div className="flex">
+                  <div>
                     <hr/>
                     <p className="light-weight text-center">Or</p>
                     <hr/>
@@ -40,7 +40,7 @@ export default class MemberSignup extends Component {
                       <input className="form-control" placeholder="Password" type="password"/>
                     </div>
                     <button className="btn btn-block btn-submit">Submit</button>
-                    <Link to="/login">Already have an account with us?</Link>
+                    <Link className="a-adjust" to="/login">Already have an account with us?</Link>
                   </form>
                 </div>
               </div>

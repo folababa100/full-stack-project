@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, ModalHeader } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 export default class CardItem extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class CardItem extends Component {
             <i style={{ fontSize: '1.2rem', marginLeft: '-0.15rem' }} className="ion-ios-gear"></i>
           </button>
           <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-            <ModalHeader>
+            <ModalHeader toggle={this.toggle}>
               User Edit
             </ModalHeader>
             <div className="mt-3 container">
@@ -46,7 +47,7 @@ export default class CardItem extends Component {
                   <div className="col-6">
                     <div className="form-group">
                       <select className="form-control">
-                        <option selected>Referral Percentage</option>
+                        <option defaultValue>Referral Percentage</option>
                         <option value="0">0</option>
                         <option value="1">1</option>
                       </select>
@@ -55,7 +56,7 @@ export default class CardItem extends Component {
                   <div className="col-6">
                     <div className="form-group">
                       <select className="form-control">
-                        <option selected>Pay Percentage</option>
+                        <option defaultValue>Pay Percentage</option>
                         <option value="0">0</option>
                         <option value="1">1</option>
                       </select>
@@ -64,7 +65,7 @@ export default class CardItem extends Component {
                   <div className="col-6">
                     <div className="form-group">
                       <select className="form-control">
-                        <option selected>Banned status</option>
+                        <option defaultValue>Banned status</option>
                         <option value="true">True</option>
                         <option value="true">False</option>
                       </select>
@@ -75,13 +76,41 @@ export default class CardItem extends Component {
                   </p>
                   <div className="col-12">
                     <div className="form-group">
-                      <textarea placeholder="User description" rows="7" className="form-control"></textarea>
+                      <input className="form-control-file" type="file"/>
                     </div>
                   </div>
-                  <hr/>
-                  
+                  <div className="col-12">
+                    <div className="form-group">
+                      <textarea placeholder="User description" rows="5" className="form-control"></textarea>
+                    </div>
+                  </div>
+                  <p className="p-hor">
+                    <span className="span-hor">Payment Options</span>
+                  </p>
+                  <div className="col-12">
+                    <div className="form-group">
+                      <input placeholder="Payment Full Name" type="text" className="form-control"/>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="form-group">
+                      <select className="form-control">
+                        <option defaultValue="Set Payment Option">Set Payment Option</option>
+                        <option value="None">None</option>
+                        <option value="Paypal">Paypal</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="form-group">
+                      <input placeholder="Payment Email Address" type="email" className="form-control"/>
+                    </div>
+                  </div>
                 </div>
-                <button className="btn btn-submit">Submit</button>
+                <div className="flex">
+                  <button className="btn btn-submit">Submit</button>
+                  <button className="btn btn-submit">Reset Payment</button>
+                </div>
               </form>
             </div>
           </Modal>
@@ -91,9 +120,13 @@ export default class CardItem extends Component {
         <td>otto@gmail.com</td>
         <td>@mdo</td>
         <td>
-          <button className="btn btn-round">Pay Button</button>
+          <button className="btn-round btn">Pay Button</button>
         </td>
       </tr>
     )
   }
+}
+
+CardItem.propTypes = {
+  className: PropTypes.string.isRequired
 }
