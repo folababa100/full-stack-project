@@ -17,7 +17,7 @@ export default class StreamJarDes extends Component {
           <li className="s-font ddd">On stream alerts</li>
           <li className="s-font ddd">User suggestions</li>
         </ul>
-        <p className="s-font p ddd">The StreamJar platform is designed for you, the streamer. We want to hear your suggestions on what you like and dislike. What could make this platform better? Is there something you need that is missing? The StreamJar team will try to add many features based on your feedback!</p>
+        <p className="s-font p ddd">The StreamJar platform is designed for you, the streamer. We want to hear your suggestions on what you like and dislike. What could make this platform better? Is there something you need that is missing? We would love to hear your suggestions at <a href="http://feedback@streamjar.co/" target="_blank" rel="noopener noreferrer">feedback@streamjar.co</a>. The StreamJar team will try to add many features based on your feedback!</p>
       </div>
     )
   }
