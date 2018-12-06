@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -25,7 +25,7 @@ export default class HeaderAdmin extends Component {
     return (
       <div className="shadow-sm-adjust">
         <Navbar className="nav-adjust navbar-light" light expand="md">
-          <NavLink className="font-family-change nav-brand-adjust navbar-brand" to="/admin">
+          <NavLink className="font-family-change nav-brand-adjust navbar-brand" to="/">
             <img style={{ marginBottom: "0.5rem" }} className="d-inline-block" width="35" height="35" src="/streamjar---Copy.png" alt="StreamJar Logo"></img>
             StreamJar
           </NavLink>
@@ -74,14 +74,18 @@ export default class HeaderAdmin extends Component {
             }
             <Nav className="mtt-sm-1 ml-auto" navbar>
               <NavItem className="res-login" style={{ marginRight: '0.7rem' }}>
-                <button className="btn-round-trans btn">
+                <Link to="/login">
+                  <button className="btn-round-trans btn">
                   Login
-                </button>
+                  </button>
+                </Link>
               </NavItem>
               <NavItem>
-                <button className="btn-round-trans btn">
-                  SignUp
-                </button>
+                <Link to="/signup">
+                  <button className="btn-round-trans btn">
+                    Signup
+                  </button>
+                </Link>
               </NavItem>
             </Nav>
           </Collapse>

@@ -354,7 +354,8 @@ td {
 }
 
 .h-font {
-  font-family: 'Unlock';
+  font-family: 'Roboto';
+  font-weight: 600;
 }
 
 .s-font {
@@ -817,6 +818,12 @@ textarea {
 
 .container-wrapperr {
   margin-left: 10vw;
+}
+
+::selection {
+  background-color: #a7a6a6;
+  color: #f5f5f5 !important;
+  text-shadow: none;
 }
 
 button {
