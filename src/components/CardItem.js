@@ -128,5 +128,5 @@ export default class CardItem extends Component {
 }
 
 CardItem.propTypes = {
-  className: PropTypes.string.isRequired
+  className: PropTypes.string
 }
