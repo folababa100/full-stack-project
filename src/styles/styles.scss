@@ -27,6 +27,7 @@ $text-color: #f5f5f5;
 .box-layout {
   align-items: center;
   background: url(/bg.jpg);
+  background-color: #43403f;
   background-size: cover;
   display: flex;
   min-height: 100vh;
@@ -37,11 +38,14 @@ $text-color: #f5f5f5;
 
 .box-layout-home {
   background: url(/kai.jpg);
-  min-height: calc(100vh - 68.96px);
+  height: calc(100vh - 69px);
+  background-color: #43403f;
   border-radius: 0 !important;
   -webkit-filter: opacity(91%);
   filter: opacity(91%);
   padding: 2rem;
+  display: flex;
+  overflow: auto;
 }
 
 .box-home {
@@ -577,16 +581,19 @@ textarea {
 
   .box-layout-home {
     background: url(/kai.jpg);
-    min-height: calc(100vh - 68.96px);
+    height: calc(100vh - 68.96px);
+    background-color: #43403f;
     border-radius: 0!important;
     -webkit-filter: opacity(91%);
     filter: opacity(91%);
     padding: 0.7rem;
+    display: flex;
+    overflow: auto;
   }
 
   .p {
     margin-bottom: 0.2rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .h33 {
