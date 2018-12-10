@@ -9,7 +9,7 @@ export default class ForgotPasswordDesign extends Component {
     return (
       <div>
         <Helmet>
-          <title>StreamJar | Forgot</title>
+          <title>StreamJar | Forgot-Password</title>
         </Helmet>
         <div className="box-layout">
           <div className="container">

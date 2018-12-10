@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 export default class MemberSignupDesign extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      show: false,
+    }
+  }
+  toggleShow() {
+    this.state.show === false ? this.setState({ show: true }) : this.setState({ show: false })
+  }
   onSubmit(e) {
     e.preventDefault()
   }
@@ -53,14 +62,38 @@ export default class MemberSignupDesign extends Component {
                       />
                     </div>
                     <div className="form-group">
-                      <input 
-                        className="form-control" 
-                        placeholder="Password"
-                        ref="password" 
-                        type="password" 
-                        autoComplete="password" 
-                        required
-                      />
+                      {
+                        this.state.show === true ? (
+                          <input 
+                            style={{ paddingRight: '2rem' }} 
+                            className="form-control pass" 
+                            placeholder="Password" 
+                            type="text" 
+                            ref="password" 
+                            autoComplete="password" 
+                            required 
+                          />
+                        ) : (
+                          <input 
+                            style={{ paddingRight: '2rem' }} 
+                            className="form-control pass" 
+                            placeholder="Password" 
+                            type="password" 
+                            ref="password" 
+                            autoComplete="password" 
+                            required 
+                          />
+                        )
+                      }
+                    </div>
+                    <div className="password">
+                      {
+                        this.state.show === true ? (
+                          <i onClick={() => this.toggleShow()} className="x15 ion-eye-disabled"></i>
+                        ) : (
+                          <i onClick={() => this.toggleShow()} className="x15 ion-eye"></i>
+                        )
+                      }
                     </div>
                     <button className="btn btn-block btn-submit">Signup</button>
                     <Link className="a-adjust" to="/login">Already have an account with us?</Link>

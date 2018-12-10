@@ -76,7 +76,10 @@ export default class CardItem extends Component {
                   </p>
                   <div className="col-12">
                     <div className="form-group">
-                      <input className="form-control-file" type="file"/>
+                      <label style={{ marginBottom: '0rem' }} className="btn btn-submit" htmtFor="file-admin">
+                        Change picture
+                        <input style={{ display: 'none' }} id="file-admin" className="form-control-file" type="file" name="file" accept="image/*" />
+                      </label>
                     </div>
                   </div>
                   <div className="col-12">

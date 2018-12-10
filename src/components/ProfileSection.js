@@ -12,9 +12,10 @@ export default class ProfileSection extends Component {
               <img className="img-adjust" src="https://res.cloudinary.com/teepublic/image/private/s--iI7ihXA---/ar_1:1,c_fill,h_300,w_300/d_misc:avatars:e_4.png,f_jpg,q_90/v1476801671/production/stores/1714/avatar.jpg" alt="Profile"/>
               {
                 this.props.showEdit === true ? (
-                  <button className="btn-float btn">
+                  <label htmlFor="file" className="btn-float btn">
+                    <input style={{ display: 'none' }} id="file" type="file" accept="image/*" name="file" />
                     <i className="ion-plus-pick ion-edit"></i>
-                  </button>
+                  </label>
                 ) : (
                   <div></div>
                 )
