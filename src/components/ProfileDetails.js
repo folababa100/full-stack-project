@@ -3,16 +3,26 @@ import React, { Component } from 'react'
 export default class ProfileDetails extends Component {
   render() {
     return (
-      <div className="card">
+      <div className="mb-3 card">
+        <h5 className="details mt-3">Your Details</h5>
+        <hr className="hr"/>
         <div className="card-body">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                
-              <p className="profile-content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              </div>
+          <div className="user-details">
+            <div>
+              <p className="user-details-text">AccountId:</p>
+              <p className="user-details-text">Username:</p>
+            </div>
+            <div style={{ marginLeft: '1rem' }}>
+              <p className="user-details-text-weight">1001</p>
+              <p className="user-details-text-weight">FriendlyWebGuy</p>
             </div>
           </div>
+          <form className="mt-2">
+            <div className="form-group">
+              <textarea placeholder="Edit your description" cols="30" rows="10" className="form-control box-shadow"></textarea>
+            </div>
+            <button style={{ marginBottom: '0' }} className="btn-submit btn">Submit</button>
+          </form>
         </div>
       </div>
     )

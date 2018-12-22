@@ -10,9 +10,17 @@ export default class NotFound extends Component {
           <title>StreamJar | NotFound</title>
         </Helmet>
         <div style={{ textAlign: "center" }} className="main-sidebar">
-          <h1 className="not-found">404</h1>
-          <hr/>
-          <Link className="not-found-home" to="/">Return home</Link>
+          <div className="container">
+            <div style={{ flexDirection: 'column' }} className="row">
+              <h1 className="not-found">404</h1>
+              <h5>Page not found</h5>
+              <div className="col-12">
+                <Link to="/">
+                  <button className="btn-res btn-round btn">Return home</button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )

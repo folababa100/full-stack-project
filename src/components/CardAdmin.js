@@ -11,7 +11,7 @@ export default class CardAdmin extends Component {
               <div className="col-12 col-sm-8 col-md-6">
                 <div className="card">
                   <div className="card-body">
-                    <h3 style={{ fontWeight: '300', fontSize: "1.3rem" }}>Total Unpaid Balance: <span className="font-family-change" style={{ fontWeight: '600' }}>$20,000</span></h3>
+                    <h3 className="total-unpaid">Total Unpaid Balance: <span className="font-family-change" style={{ fontWeight: '600' }}>$20,000</span></h3>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 export default class SidebarBar extends Component {
   render() {
@@ -9,4 +10,8 @@ export default class SidebarBar extends Component {
       </div>
     )
   }
+}
+
+SidebarBar.propTypes = {
+  title: PropTypes.string.isRequired
 }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import HomeUserDesign from './HomeUserDesign';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        Hello we are here
+        <HomeUserDesign/>
       </div>
     );
   }

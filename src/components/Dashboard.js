@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet';
 import Header from './Header';
 import MainBodyUser from './MainBodyUser';
+import SidebarAdmin from './SidebarAdmin';
 
 export default class Dashboard extends Component {
   render() {
@@ -10,8 +11,9 @@ export default class Dashboard extends Component {
         <Helmet>
           <title>StreamJar | Dashboard</title>
         </Helmet>
-        <div className="main">
-          <Header/>
+        <Header/>
+        <div style={{ flexDirection: 'column' }} className="main">
+          <SidebarAdmin/>
           <MainBodyUser/>
         </div>
       </div>
