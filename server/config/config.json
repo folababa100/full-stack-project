@@ -6,7 +6,7 @@
   },
   "development": {
     "PORT": "4000",
-    "MONGO_URI": "mongodb://localhost:27017/StreamJar",
+    "MONGO_URI": "mongodb://user:password1@ds024778.mlab.com:24778/streemjar",
     "JWT_SECRET": "17WWbff8bciyb3e7byhcue89u29ubvv8hw82eu8"
   }
 }
