@@ -5,9 +5,9 @@ import {
   Navbar,
   NavbarToggler,
   Nav,
-  NavItem, } from 'reactstrap';
+  NavItem } from 'reactstrap';
 
-export default class HeaderAdmin extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -33,10 +33,10 @@ export default class HeaderAdmin extends Component {
           <Collapse style={{ marginTop: '-0.1rem' }} isOpen={this.state.isOpen} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink exact={true} activeClassName="is-active" className="nav-link" to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" to="/about">About</NavLink>
+                <NavLink activeClassName="is-active" className="nav-link" to="/about">About</NavLink>
               </NavItem>
             </Nav>
             <Nav className="mtt-sm-1 ml-auto" navbar>

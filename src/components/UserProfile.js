@@ -7,11 +7,11 @@ export default class UserProfile extends Component {
   render() {
     return (
       <div>
-          <Helmet>
-            <title>StreamJar | Profile</title>
-          </Helmet>
-        <div className="main-sidebar">
-          <Header/>
+        <Helmet>
+          <title>StreamJar | Profile</title>
+        </Helmet>
+        <Header/>
+        <div className="main">
           <MainBodyProfile/>
         </div>
       </div>

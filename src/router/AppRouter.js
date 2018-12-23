@@ -16,6 +16,8 @@ import ForgotPasswordForm from '../components/ForgotPasswordForm';
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
 import AboutPage from '../components/AboutPage';
 import HomePage from '../components/HomePage';
+// import PrivateRoute from './PrivateRoute';
+// import PublicRoute from './PublicRoute';
 
 export const history = createHistory();
 

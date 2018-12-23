@@ -26,10 +26,12 @@ export default class AdminLoginDesign extends Component {
             <div className="col-md-6 col-sm-6 col-lg-4 col-12">
               <div className="card">
                 <div className="card-body">
-                  <form onSubmit={this.onSubmit.bind(this)} style={{ textAlign: 'center' }}>
+                  <form onSubmit={this.onSubmit.bind(this)}>
                     <h3 className="header-form">Admin Login</h3>
                     <div className="form-group">
-                      <input 
+                      <label htmlFor="email">Email address</label>
+                      <input
+                        id="email"
                         autoFocus={true} 
                         className="form-control" 
                         placeholder="Email"
@@ -39,9 +41,11 @@ export default class AdminLoginDesign extends Component {
                       />
                     </div>
                     <div className="form-group">
+                      <label htmlFor="passwor">Password</label>
                       {
                         this.state.show === true ? (
-                          <input 
+                          <input
+                            id="passwor"
                             style={{ paddingRight: '2rem' }} 
                             className="form-control pass" 
                             placeholder="Password" 
@@ -51,7 +55,8 @@ export default class AdminLoginDesign extends Component {
                             required 
                           />
                         ) : (
-                          <input 
+                          <input
+                            id="passwor"
                             style={{ paddingRight: '2rem' }} 
                             className="form-control pass" 
                             placeholder="Password" 
@@ -73,7 +78,9 @@ export default class AdminLoginDesign extends Component {
                       }
                     </div>
                     <button className="btn btn-block btn-submit">Submit</button>
-                    <Link className="a-adjust" to="/forgot">Forgot your password?</Link>
+                    <div style={{ textAlign: 'center', width: '100%' }}>
+                      <Link className="a-adjust" to="/forgot">Forgot your password?</Link>
+                    </div>
                   </form>
                 </div>
               </div>

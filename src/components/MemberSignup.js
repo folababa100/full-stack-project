@@ -2,10 +2,12 @@ import React from 'react';
 import MemberSignupDesign from './MemberSignupDesign'
 // import { connect } from 'react-redux';
 
-const MemberSignup = () => {
+const MemberSignup = (props) => {
   return (
     <div>
-      <MemberSignupDesign/>
+      <MemberSignupDesign
+        history={props.history}
+      />
     </div>
   )
 }

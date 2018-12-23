@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk';
 import authAdminReducer from '../reducers/adminAuth';
 import axios from 'axios';
+import memberAuth from '../reducers/memberAuth';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -15,7 +16,8 @@ const accessToken = (store) => (next) => (action) => {
 export default () => {
   const store = createStore(
     combineReducers({
-      admin: authAdminReducer
+      admin: authAdminReducer,
+      auth: memberAuth
     }),
     composeEnhancers(applyMiddleware(thunk, accessToken))
   );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import GoogleLogin from 'react-google-login';
 
 export default class MemberSignupDesign extends Component {
   constructor(props) {
@@ -16,6 +17,16 @@ export default class MemberSignupDesign extends Component {
     e.preventDefault()
   }
   render() {
+    const responseGoogle = (response) => {
+      console.log(response);
+    }
+    const responseGoogleSuccess = (response) => {
+      console.log(response.profileObj)
+      window.localStorage.setItem('authData', JSON.stringify(response))
+      const res = JSON.parse(window.localStorage.getItem('authData'), null, 2)
+      console.log(res.profileObj)
+      this.props.history.push('/dashboard')
+    }
     return (
       <div className="box-layout">
         <Helmet>
@@ -32,10 +43,18 @@ export default class MemberSignupDesign extends Component {
                     Login with Twitch
                   </button>
                   <hr/>
-                  <button className="youtube-color color btn-block btn">
-                    <i className="color x4 ion-social-youtube"></i>
-                    Login with Youtube
-                  </button>
+                  <GoogleLogin
+                    clientId="941753139994-96qalhvtvob3uq6es9m5p13u4abnlpjm.apps.googleusercontent.com"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogle}
+                    buttonText="Login with Youtube"
+                    render={renderProps => (
+                      <button className="youtube-color color btn-block btn" onClick={renderProps.onClick}>
+                        <i className="color x4 ion-social-youtube"></i>
+                        Login with Youtube
+                      </button>
+                    )}
+                  />
                   <div>
                     <hr/>
                     <p className="light-weight text-center">Or</p>

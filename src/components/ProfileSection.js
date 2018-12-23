@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ProfileSection extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      profileObj: JSON.parse(window.localStorage.getItem('authData'), null, 2).profileObj
+    }
+  }
   render() {
     return (
       <div className="col-12">
@@ -9,7 +15,7 @@ export default class ProfileSection extends Component {
           <div className="profile-wrapper col-12"></div>
           <div className="profile-adjust col-4">
             <div className="mb-3 img-wrapper">
-              <img className="img-adjust" src="https://res.cloudinary.com/teepublic/image/private/s--iI7ihXA---/ar_1:1,c_fill,h_300,w_300/d_misc:avatars:e_4.png,f_jpg,q_90/v1476801671/production/stores/1714/avatar.jpg" alt="Profile"/>
+              <img className="img-adjust" src={this.state.profileObj.imageUrl} alt="Profile"/>
               {
                 this.props.showEdit === true ? (
                   <label htmlFor="file" className="btn-float btn">

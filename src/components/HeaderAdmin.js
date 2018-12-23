@@ -5,7 +5,7 @@ import {
   Navbar,
   NavbarToggler,
   Nav,
-  NavItem, } from 'reactstrap';
+  NavItem } from 'reactstrap';
 
 export default class HeaderAdmin extends Component {
   constructor(props) {
@@ -36,14 +36,11 @@ export default class HeaderAdmin extends Component {
           <Collapse style={{ marginTop: '-0.15rem' }} isOpen={this.state.isOpen} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink exact={true} activeClassName="is-active" className="nav-link" to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="nav-link" to="/about">About</NavLink>
+                <NavLink activeClassName="is-active" className="nav-link" to="/about">About</NavLink>
               </NavItem>
-              {/* <NavItem className="nav-item-adjust">
-                <i onClick={() => this.onInputSearch()} className="ion-android-search-icon ion-android-search"></i>
-              </NavItem> */}
               <NavItem className="ml-md-3">
                 <button onClick={() => this.reloadCurrent()} className="btn-round-trans btn">
                   <i style={{ marginRight: '0.4rem' }} className="ion-refresh-adjust ion-refresh"></i>

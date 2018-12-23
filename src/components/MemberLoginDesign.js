@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import GoogleLogin from 'react-google-login';
 
 export default class MemberLoginDesign extends Component {
   constructor(props) {
@@ -16,6 +17,9 @@ export default class MemberLoginDesign extends Component {
     e.preventDefault()
   }
   render() {
+    const responseGoogle = (response) => {
+      console.log(response);
+    }
     return (
       <div className="box-layout">
         <Helmet>
@@ -31,23 +35,31 @@ export default class MemberLoginDesign extends Component {
                     <i className="color x4 ion-social-twitch-outline"></i>
                     Login with Twitch
                   </button>
-                  <hr/>
-                  <button className="youtube-color color btn-block btn">
-                    <i className="color x4 ion-social-youtube"></i>
-                    Login with Youtube
-                  </button>
+                  <hr />
+                  <GoogleLogin
+                    clientId="941753139994-96qalhvtvob3uq6es9m5p13u4abnlpjm.apps.googleusercontent.com"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    buttonText="Login with Youtube"
+                    render={renderProps => (
+                      <button className="youtube-color color btn-block btn" onClick={renderProps.onClick}>
+                        <i className="color x4 ion-social-youtube"></i>
+                        Login with Youtube
+                      </button>
+                    )}
+                  />
                   <div>
-                    <hr/>
+                    <hr />
                     <p className="light-weight text-center">Or</p>
-                    <hr/>
+                    <hr />
                   </div>
                   <form onSubmit={this.onSubmit.bind(this)} style={{ textAlign: 'center' }}>
                     <div className="form-group">
-                      <input 
-                        className="form-control" 
-                        placeholder="Email Address" 
-                        type="email" 
-                        required 
+                      <input
+                        className="form-control"
+                        placeholder="Email Address"
+                        type="email"
+                        required
                         autoFocus={true}
                         ref="email"
                       />
@@ -55,26 +67,26 @@ export default class MemberLoginDesign extends Component {
                     <div className="form-group">
                       {
                         this.state.show === true ? (
-                          <input 
-                            style={{ paddingRight: '2rem' }} 
-                            className="form-control pass" 
-                            placeholder="Password" 
-                            type="text" 
-                            ref="password" 
-                            autoComplete="password" 
-                            required 
+                          <input
+                            style={{ paddingRight: '2rem' }}
+                            className="form-control pass"
+                            placeholder="Password"
+                            type="text"
+                            ref="password"
+                            autoComplete="password"
+                            required
                           />
                         ) : (
-                          <input 
-                            style={{ paddingRight: '2rem' }} 
-                            className="form-control pass" 
-                            placeholder="Password" 
-                            type="password" 
-                            ref="password" 
-                            autoComplete="password" 
-                            required 
-                          />
-                        )
+                            <input
+                              style={{ paddingRight: '2rem' }}
+                              className="form-control pass"
+                              placeholder="Password"
+                              type="password"
+                              ref="password"
+                              autoComplete="password"
+                              required
+                            />
+                          )
                       }
                     </div>
                     <div className="password">
@@ -82,8 +94,8 @@ export default class MemberLoginDesign extends Component {
                         this.state.show === true ? (
                           <i onClick={() => this.toggleShow()} className="x15 ion-eye-disabled"></i>
                         ) : (
-                          <i onClick={() => this.toggleShow()} className="x15 ion-eye"></i>
-                        )
+                            <i onClick={() => this.toggleShow()} className="x15 ion-eye"></i>
+                          )
                       }
                     </div>
                     <button className="btn btn-block btn-submit">Login</button>
