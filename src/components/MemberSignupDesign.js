@@ -21,10 +21,9 @@ export default class MemberSignupDesign extends Component {
       console.log(response);
     }
     const responseGoogleSuccess = (response) => {
-      console.log(response.profileObj)
+      console.log(response)
       window.localStorage.setItem('authData', JSON.stringify(response))
-      const res = JSON.parse(window.localStorage.getItem('authData'), null, 2)
-      console.log(res.profileObj)
+      window.localStorage.setItem('loginMethod', 'google')
       this.props.history.push('/dashboard')
     }
     return (
@@ -64,7 +63,7 @@ export default class MemberSignupDesign extends Component {
                     <div className="form-group">
                       <input 
                         className="form-control" 
-                        placeholder="Email Adresss" 
+                        placeholder="Email Address" 
                         type="email"
                         ref="email"
                         required 

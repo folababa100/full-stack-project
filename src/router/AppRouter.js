@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import AdminLogin from '../components/AdminLogin';
@@ -16,8 +16,8 @@ import ForgotPasswordForm from '../components/ForgotPasswordForm';
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
 import AboutPage from '../components/AboutPage';
 import HomePage from '../components/HomePage';
-// import PrivateRoute from './PrivateRoute';
-// import PublicRoute from './PublicRoute';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 export const history = createHistory();
 
@@ -25,19 +25,19 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-        <Route component={HomePage} path="/" exact={true} />
-        <Route component={HomeUsers} path="/find/users" />
-        <Route component={MemberLogin} path="/login" />
-        <Route component={MemberSignup} path="/signup" />
-        <Route component={AboutPage} path="/about" />
-        <Route component={PrivacyPolicyPage} path="/privacy/policy" />
-        <Route component={Dashboard} path="/dashboard" />
-        <Route component={ForgotPassword} path="/forgot/password"/>
-        <Route component={ForgotPasswordForm} path="/forgot/reset"/>
-        <Route component={UserProfile} path="/u/username" />
-        <Route component={AdminDashboard} exact={true} path="/admin" />
-        <Route component={AdminLogin} path="/admin/login" />
-        <Route component={NotFound} />
+        <PublicRoute component={HomePage} path="/" exact={true} />
+        <PublicRoute component={HomeUsers} path="/find/users" />
+        <PublicRoute component={MemberLogin} path="/login" />
+        <PublicRoute component={MemberSignup} path="/signup" />
+        <PublicRoute component={AboutPage} path="/about" />
+        <PublicRoute component={PrivacyPolicyPage} path="/privacy/policy" />
+        <PrivateRoute component={Dashboard} path="/dashboard" />
+        <PublicRoute component={ForgotPassword} path="/forgot/password"/>
+        <PublicRoute component={ForgotPasswordForm} path="/forgot/reset"/>
+        <PublicRoute component={UserProfile} path="/u/username" />
+        <PublicRoute component={AdminDashboard} exact={true} path="/admin" />
+        <PublicRoute component={AdminLogin} path="/admin/login" />
+        <PublicRoute component={NotFound} />
       </Switch>
     </div>
   </Router>

@@ -5,7 +5,10 @@ import {
   Navbar,
   NavbarToggler,
   Nav,
-  NavItem } from 'reactstrap';
+  NavItem
+} from 'reactstrap';
+import { GoogleLogout } from 'react-google-login';
+
 
 export default class Header extends Component {
   constructor(props) {
@@ -22,6 +25,11 @@ export default class Header extends Component {
     });
   }
   render() {
+    const logout = (res) => {
+      window.localStorage.removeItem('authData');
+      this.props.history.push('/')
+      console.log(res);
+    }
     return (
       <div className="shadow-sm-adjust">
         <Navbar className="nav-adjust navbar-light" light expand="md">
@@ -29,7 +37,7 @@ export default class Header extends Component {
             <img style={{ marginBottom: "0.5rem" }} className="d-inline-block" width="35" height="35" src="/streamjar---Copy.png" alt="StreamJar Logo"></img>
             StreamJar
           </NavLink>
-          <NavbarToggler type="i" className="ion-navicon-round" tag="i" onClick={this.toggle}/>
+          <NavbarToggler type="i" className="ion-navicon-round" tag="i" onClick={this.toggle} />
           <Collapse style={{ marginTop: '-0.1rem' }} isOpen={this.state.isOpen} navbar>
             <Nav navbar>
               <NavItem>
@@ -41,9 +49,16 @@ export default class Header extends Component {
             </Nav>
             <Nav className="mtt-sm-1 ml-auto" navbar>
               <NavItem>
-                <button className="btn-round-trans btn">
-                  Logout
-                </button>
+                <GoogleLogout
+                  buttonText="Logout"
+                  onLogoutSuccess={logout}
+                  render={renderProps => (
+                    <button className="btn-round-trans btn" onClick={renderProps.onClick}>
+                      Logout
+                    </button>
+                  )}
+                >
+                </GoogleLogout>
               </NavItem>
             </Nav>
           </Collapse>
