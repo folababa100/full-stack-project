@@ -31,7 +31,7 @@ const AppRouter = () => (
         <PublicRoute component={MemberSignup} path="/signup" />
         <PublicRoute component={AboutPage} path="/about" />
         <PublicRoute component={PrivacyPolicyPage} path="/privacy/policy" />
-        <PrivateRoute component={Dashboard} path="/dashboard" />
+        <PublicRoute component={Dashboard} path="/dashboard" />
         <PublicRoute component={ForgotPassword} path="/forgot/password"/>
         <PublicRoute component={ForgotPasswordForm} path="/forgot/reset"/>
         <PublicRoute component={UserProfile} path="/u/username" />
