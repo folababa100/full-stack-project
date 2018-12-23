@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ProfileSection extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      profile: JSON.parse(window.localStorage.getItem('authData'), null, 2)
-    }
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     profile: JSON.parse(window.localStorage.getItem('authData'), null, 2)
+  //   }
+  // }
   render() {
     return (
       <div className="col-12">
