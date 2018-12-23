@@ -15,15 +15,7 @@ export default class ProfileSection extends Component {
           <div className="profile-wrapper col-12"></div>
           <div className="profile-adjust col-4">
             <div className="mb-3 img-wrapper">
-              {
-                this.state.profile === true ?
-                  (
-                    <img className="img-adjust" src={this.state.profile.profileObj.imageUrl} alt="Profile"/>
-                  ) : 
-                  (
-                     <img className="img-adjust" src='http://www.nikseminar.com/wp-content/uploads/2015/04/anonymous-user.png' alt="Profile"/>
-                  )
-              }
+              <img className="img-adjust" src='http://www.nikseminar.com/wp-content/uploads/2015/04/anonymous-user.png' alt="Profile"/>
               {
                 this.props.showEdit === true ? (
                   <label htmlFor="file" className="btn-float btn">
