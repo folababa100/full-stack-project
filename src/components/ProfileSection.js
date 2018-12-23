@@ -5,7 +5,7 @@ export default class ProfileSection extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      profileObj: JSON.parse(window.localStorage.getItem('authData'), null, 2)
+      profile: JSON.parse(window.localStorage.getItem('authData'), null, 2)
     }
   }
   render() {
@@ -16,9 +16,9 @@ export default class ProfileSection extends Component {
           <div className="profile-adjust col-4">
             <div className="mb-3 img-wrapper">
               {
-                this.state.profileObj === false ?
+                this.state.profile === true ?
                   (
-                    <img className="img-adjust" src={this.state.profileObj.profileObj.imageUrl} alt="Profile"/>
+                    <img className="img-adjust" src={this.state.profile.profileObj.imageUrl} alt="Profile"/>
                   ) : 
                   (
                      <img className="img-adjust" src='http://www.nikseminar.com/wp-content/uploads/2015/04/anonymous-user.png' alt="Profile"/>
