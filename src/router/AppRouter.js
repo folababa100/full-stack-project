@@ -16,6 +16,8 @@ import ForgotPasswordForm from '../components/ForgotPasswordForm';
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
 import AboutPage from '../components/AboutPage';
 import HomePage from '../components/HomePage';
+import PostBack from '../components/PostBack';
+
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -34,9 +36,10 @@ const AppRouter = () => (
         <PublicRoute component={Dashboard} path="/dashboard" />
         <PublicRoute component={ForgotPassword} path="/forgot/password"/>
         <PublicRoute component={ForgotPasswordForm} path="/forgot/reset"/>
-        <PublicRoute component={UserProfile} path="/u/username" />
+        <PublicRoute component={UserProfile} path="/u/:username" />
         <PublicRoute component={AdminDashboard} exact={true} path="/admin" />
         <PublicRoute component={AdminLogin} path="/admin/login" />
+        <PublicRoute component={PostBack} path="/postback"/>
         <PublicRoute component={NotFound} />
       </Switch>
     </div>

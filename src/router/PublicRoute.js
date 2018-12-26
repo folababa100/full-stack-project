@@ -8,13 +8,9 @@ export const PublicRoute = ({
 }) => (
   <Route {...rest} component={(props) => (
 
-    localStorage.getItem("authData") ? (
-        <Redirect to="/dashboard"/>
-      ) : (
-        <div>
-          <Component {...props} />
-        </div>
-      )
+    <div>
+      <Component {...props} />
+    </div>
 
   )} />
 )

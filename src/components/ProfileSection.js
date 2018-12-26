@@ -5,7 +5,7 @@ export default class ProfileSection extends Component {
   // constructor(props) {
   //   super(props)
   //   this.state = {
-  //     profile: JSON.parse(window.localStorage.getItem('authData'), null, 2)
+  //     profile: typeof(JSON.parse(window.localStorage.getItem('authData'))) === 'object' ? JSON.parse(window.localStorage.getItem('authData')) : ''
   //   }
   // }
   render() {

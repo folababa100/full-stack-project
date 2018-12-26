@@ -6,7 +6,16 @@ export default class CardItem extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modal: false
+      modal: false,
+      email: props.user ? props.user.email : '',
+      username: props.user ? props.user.username : '',
+      password: props.user ? props.user.password : '',
+      number: props.user ? props.user.number : '',
+      refPercentage: props.user ? props.user.refPercentage : '',
+      totalEarned: props.user ? props.user.totalEarned : '',
+      payPecentage: props.user ? props.user.payPecentage : '',
+      banned: props.user ? props.user.banned : '',
+      description: props.user ? props.user.description : '',
     }
     this.toggle = this.toggle.bind(this)
   }
@@ -31,17 +40,17 @@ export default class CardItem extends Component {
                 <div className="row">
                   <div className="col-12">
                     <div className="form-group">
-                      <input className="form-control" type="email" placeholder="Email"/>
+                      <input value={this.state.email} className="form-control" type="email" placeholder="Email"/>
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="form-group">
-                      <input className="form-control" type="password" placeholder="Password"/>
+                      <input value={this.state.password} className="form-control" type="password" placeholder="Password"/>
                     </div>
                   </div>
                   <div className="col-6">
                     <div className="form-group">
-                      <input placeholder="Total Earned" className="form-control" type="number"/>
+                      <input value={this.state.number} placeholder="Total Earned" className="form-control" type="number"/>
                     </div>
                   </div>
                   <div className="col-6">
@@ -84,7 +93,7 @@ export default class CardItem extends Component {
                   </div>
                   <div className="col-12">
                     <div className="form-group">
-                      <textarea placeholder="User description" rows="5" className="form-control"></textarea>
+                      <textarea value={this.state.description} placeholder="User description" rows="5" className="form-control"></textarea>
                     </div>
                   </div>
                   <p className="p-hor">

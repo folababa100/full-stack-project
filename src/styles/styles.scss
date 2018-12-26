@@ -865,10 +865,25 @@ textarea {
   padding-right: 0.5rem;
 }
 
+.no_underline:hover {
+  text-decoration: none;
+}
+
+.img-offers {
+  background-color: white;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
 .x15 {
   font-size: 1.5rem;
 }
 
 button {
   outline : none !important;
+}
+
+.pay-point {
+  width: 4rem;
+  padding-right: 0.5rem;
 }
