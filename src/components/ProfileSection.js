@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class ProfileSection extends Component {
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     profile: typeof(JSON.parse(window.localStorage.getItem('authData'))) === 'object' ? JSON.parse(window.localStorage.getItem('authData')) : ''
+  //   }
+  // }
   render() {
     return (
       <div className="col-12">
@@ -9,12 +15,13 @@ export default class ProfileSection extends Component {
           <div className="profile-wrapper col-12"></div>
           <div className="profile-adjust col-4">
             <div className="mb-3 img-wrapper">
-              <img className="img-adjust" src="https://res.cloudinary.com/teepublic/image/private/s--iI7ihXA---/ar_1:1,c_fill,h_300,w_300/d_misc:avatars:e_4.png,f_jpg,q_90/v1476801671/production/stores/1714/avatar.jpg" alt="Profile"/>
+              <img className="img-adjust" src='http://www.nikseminar.com/wp-content/uploads/2015/04/anonymous-user.png' alt="Profile"/>
               {
                 this.props.showEdit === true ? (
-                  <button className="btn-float btn">
+                  <label htmlFor="file" className="btn-float btn">
+                    <input style={{ display: 'none' }} id="file" type="file" accept="image/*" name="file" />
                     <i className="ion-plus-pick ion-edit"></i>
-                  </button>
+                  </label>
                 ) : (
                   <div></div>
                 )

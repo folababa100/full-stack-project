@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
         <Helmet>
           <title>StreamJar | Dashboard</title>
         </Helmet>
-        <Header/>
+        <Header history={this.props.history}/>
         <div style={{ flexDirection: 'column' }} className="main">
           <SidebarAdmin/>
           <MainBodyUser/>

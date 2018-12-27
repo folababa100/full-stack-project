@@ -15,6 +15,9 @@ export default class AdminDashboard extends Component {
         <div className="main">
           <SidebarAdmin/>
           <MainBody/>
+          <button className="btn btn-float-bg">
+            <i className="ion-arrow-up-b"></i>
+          </button>
         </div>
       </div>
     )
